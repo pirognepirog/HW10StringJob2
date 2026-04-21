@@ -18,11 +18,11 @@ public class Main {
     public static void recomendVersionOC (int clientDeviceYear, int clientOS){
         if (clientDeviceYear < 2015 && clientOS == 0) {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-        }else if (clientDeviceYear < 2015 && clientOS == 1) {
+        } else if (clientDeviceYear < 2015 && clientOS == 1){
             System.out.println("Установите облегченную версию приложения для Android по ссылке");
-        }else if (clientDeviceYear >= 2015 && clientOS == 0)   {
+        } else if (clientDeviceYear >= 2015 && clientOS == 0){
             System.out.println("Установите версию приложения для iOS по ссылке");
-        }else if (clientDeviceYear >= 2015 && clientOS == 1)   {
+        } else if (clientDeviceYear >= 2015 && clientOS == 1){
             System.out.println("Установите версию приложения для Android по ссылке");
         }
     }
@@ -33,14 +33,16 @@ public class Main {
         int deliveryDays = 1;
         if (deliveryDistance <= 20) {
             System.out.println("Дистанция в пределах " + deliveryDistance + " км занимает " + deliveryDays + " сутки");
-        } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
+        }
+        if (deliveryDistance > 20 && deliveryDistance <= 60) {
             deliveryDays += 1;
             System.out.println("Дистанция в пределах " + deliveryDistance + " км занимает " + deliveryDays + " суток");
-        } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
+        }
+        if (deliveryDistance > 60 && deliveryDistance <= 100) {
             deliveryDays += 2;
             System.out.println("Дистанция в пределах " + deliveryDistance + " км занимает " + deliveryDays + " суток");
-        } else if (deliveryDistance > 100) {
-            deliveryDays++;
+        }
+        if (deliveryDistance > 100) {
             System.out.println("Дистанция свыше 100 км - доставка не производится, вам необходимо ее организовать самому!");
         }
     }
@@ -60,7 +62,7 @@ public class Main {
         recomendVersionOC(currentOldYear, currentVersion);
 
         System.out.println("Задача 3");
-        int deliveryDistance = 5;
+        int deliveryDistance = 80;
         returnDeliveryDays(deliveryDistance);
     }
 }
